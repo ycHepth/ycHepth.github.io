@@ -152,6 +152,166 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Newton-Euler-Dynamics" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/09/27/Newton-Euler-Dynamics/">NewtonEulerNotes</a>
+    </h1>
+  
+
+        
+        <a href="/2020/09/27/Newton-Euler-Dynamics/" class="archive-article-date">
+  	<time datetime="2020-09-27T02:23:42.104Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-27</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Newton-Equation"><a href="#Newton-Equation" class="headerlink" title="Newton Equation"></a>Newton Equation</h2><h3 id="1-for-mass-points"><a href="#1-for-mass-points" class="headerlink" title="1. for mass points:"></a>1. for mass points:</h3><script type="math/tex; mode=display">m\ddot r = F</script><h3 id="2-for-Translation-rigid-body"><a href="#2-for-Translation-rigid-body" class="headerlink" title="2. for Translation rigid body:"></a>2. for Translation rigid body:</h3><script type="math/tex; mode=display">\sum_i m_i \ddot r = \sum_i F_i^{(e)} + \sum_i F_i^{(i)}</script><blockquote>
+<p>notice: for mass points in rigid body, the $\sum_i F_i^{(i)} = 0$, thus <script type="math/tex">\sum_i m_i \ddot r = F</script></p>
+</blockquote>
+<h3 id="3-for-general-rigid-body"><a href="#3-for-general-rigid-body" class="headerlink" title="3. for general rigid body:"></a>3. for general rigid body:</h3><p> the difference from translation one is: the velocity of mass points are different in rigid body.<br> for separeted mass point, the following equation hold:</p>
+<script type="math/tex; mode=display">m_i \ddot r_i = F_i^{(e)} + F_i^{(i)}</script><p> for whole rigid body:</p>
+<script type="math/tex; mode=display">\sum_i m_i \ddot r_i =\sum_i  F_i^{(e)} +\sum_i  F_i^{(i)}</script><p> define mass center vector as $r_c$</p>
+<script type="math/tex; mode=display">\sum_i m_ir_i = mr_c</script><p> as the result, the <strong><em>Newton equation</em></strong> can be described as</p>
+<script type="math/tex; mode=display">m \ddot r_c =F</script><blockquote>
+<p>for general rigid body, the motion of itself always contains translation and rotation, however, the Newton equation can just described the translation.</p>
+</blockquote>
+<h2 id="Euler-Equation"><a href="#Euler-Equation" class="headerlink" title="Euler Equation"></a>Euler Equation</h2><h3 id="moment-of-momentum"><a href="#moment-of-momentum" class="headerlink" title="moment of momentum"></a>moment of momentum</h3><h4 id="1-for-mass-points-1"><a href="#1-for-mass-points-1" class="headerlink" title="1. for mass points"></a><strong>1. for mass points</strong></h4><p> the momentum of mass point is defined as </p>
+<script type="math/tex; mode=display">m\dot r= mv</script><p> the moment of momentum is defined as</p>
+<script type="math/tex; mode=display">l_o = r \times mv</script><p> the derivation of moment is:</p>
+<script type="math/tex; mode=display">\dot l_o = r \times m\ddot r</script><p> notice from <strong><em>Newton Equation</em></strong>, the mass points hold following equation:</p>
+<script type="math/tex; mode=display">m\ddot r = F</script><p> subsitude to moment equation, obtain new equation:</p>
+<script type="math/tex; mode=display">\dot l_o = r \times F = n_o</script><p> where $n_o$ represented moment of $F$ about point $O$.</p>
+<p> Here we give the a theorem:</p>
+<blockquote>
+<p> <strong>theorem of moment of momentum</strong></p>
+<p>for a fixed point $O$, the mass point of it has the moment of momentum, and the derivation of this moment equivalent to the moment, which result from external force to point $O$.</p>
+</blockquote>
+<h4 id="2-for-rigid-body-at-fixed-point"><a href="#2-for-rigid-body-at-fixed-point" class="headerlink" title="2. for rigid body at fixed point"></a><strong>2. for rigid body at fixed point</strong></h4><p> for fixed point $O$, every point of rigid body satisfied <strong><em>theorem of moment of momentum</em></strong>. </p>
+<script type="math/tex; mode=display">\dot l_{iO} = r_i \times m_i\dot r_i</script><script type="math/tex; mode=display">n_{iO}^e = r_i \times F_i^e</script><script type="math/tex; mode=display">n_{iO}^i = r_i \times F_i^i</script><p> subsitude to moment equation:</p>
+<script type="math/tex; mode=display">\dot l_{iO}=n_{iO}^e + n_{iO}^i</script><p> consider the whole rigid body:</p>
+<script type="math/tex; mode=display">\sum_i \dot l_{iO}=\sum_i n_{iO}^e +\sum_i n_{iO}^i</script><blockquote>
+<p>notice: <script type="math/tex">\sum_i n_{iO}^i = 0</script> since the inner forces are pairwise.</p>
+</blockquote>
+<p> define the moment of momentum as</p>
+<script type="math/tex; mode=display">L_O = \sum_i l_{iO} = \sum_i r_i \times m_i\dot r_i</script><p> define principal moment of external force to point $O$</p>
+<script type="math/tex; mode=display">M_O = \sum_i n_{iO}^e = \sum_i r_i \times F_i^e</script><p> thus we obtain equation, which has similar formulation with mass point situation:</p>
+<script type="math/tex; mode=display">\dot L_O = M_O</script><h4 id="3-rigid-body-to-any-point"><a href="#3-rigid-body-to-any-point" class="headerlink" title="3. rigid body to any point"></a><strong>3. rigid body to any point</strong></h4><p>assume point $P$ is reference fixed point, and the original points of coordination is $O$.</p>
+<script type="math/tex; mode=display">r_i = \vec {OP} + \bar r_i</script><p>the <strong><em>absolutely moment of momentum</em></strong> about point $P$</p>
+<script type="math/tex; mode=display">L_p=\sum_i \bar r_i \times m_i \dot r_i =\sum_i (r_i-\vec {OP}) \times m_i \dot r_i</script><p>the above equation can be transformed to:</p>
+<script type="math/tex; mode=display">L_p = L_O - \vec {OP} \times \sum_i m_i\dot r_i</script><p>combined with mass center definition:</p>
+<script type="math/tex; mode=display">\sum_i m_i\dot r_i =mv_c</script><p>thus, we have next equation:</p>
+<script type="math/tex; mode=display">L_p = L_O - \vec {OP} \times mv_c</script><p>this equation shows the relationship of moment of momentum bewteen fixed point and moving point.</p>
+<p>Since we have obtained <strong><em>Newton Equation</em></strong> before, </p>
+<script type="math/tex; mode=display">\begin{aligned}\dot L_p  &= \dot L_O + \vec {PO} \times m \ddot r_c - \dot{\vec {OP}} \times mv_c \\&=\dot L_O +\vec {PO} \times F - v_p \times mv_c \\&=M_O + \vec {PO} \times F - v_p \times mv_c\end{aligned}</script><p>another point should be mentioned is that : the external force applied to $P$ will conduct a principal moment of $P$ : <script type="math/tex">M_P = M_O + \vec {PO} \times F</script><br>thus,</p>
+<script type="math/tex; mode=display">\dot L_P = M_P - v_p \times mv_c</script><blockquote>
+<p>when reference point $P$ is selected as the mass point $C$, the $v_p$ = $v_c$, and $v_p \times mv_c = v_c \times mv_c = 0$, the above equation tramsfrom to </p>
+<script type="math/tex; mode=display">\dot L_c = M_c</script><p>In the other words, the moment of momentum about mass center is equivalent to fixed point case, whatever rigid body is moving.</p>
+</blockquote>
+<p>there are some important properties:</p>
+<script type="math/tex; mode=display">r_i = r_c + r_{ci}</script><script type="math/tex; mode=display">v_i = v_c + \bar v_i</script><p>where $\bar v_i$ is relative speed from mass point $i$  to $C$<br>the <strong><em>relative moment of momentum</em></strong> about mass center:</p>
+<script type="math/tex; mode=display">L_C^r = \sum_i r_{Ci} \times m_i\bar v_i</script><p>Compare with  <strong><em>absolutely moment of momentum</em></strong>, we have following equation:</p>
+<script type="math/tex; mode=display">\begin{aligned} L_C &= \sum_i r_{Ci} \times m_i v_i \\&= \sum_i r_{Ci} \times m_i(v_c + \bar v_i) \\&= \sum_i m_ir_{Ci} \times v_c + L_C^r\end{aligned}</script><blockquote>
+<p>notice: <script type="math/tex">\sum_i m_ir_{Ci} \times v_c = 0</script><br>then $L_c = L_C^r$,<br>which meaning that for mass center, the absolute moment and relative moment of momentum is equivalent.<br>Furthermore, </p>
+<script type="math/tex; mode=display">\dot L_C^r = \dot L_C = M_C</script></blockquote>
+<h3 id="coordinate-of-momentum"><a href="#coordinate-of-momentum" class="headerlink" title="coordinate of momentum"></a><strong><em>coordinate of momentum</em></strong></h3><h4 id="1-rotate-around-fixed-point"><a href="#1-rotate-around-fixed-point" class="headerlink" title="1. rotate around fixed point"></a><em>1. rotate around fixed point</em></h4><p>assume the angular velocity is $\omega$,<br>the velocity of mass point $i$ is </p>
+<script type="math/tex; mode=display">\dot r_i = v_i = \omega \times r_i</script><p>from the definition of the moment of momentum,</p>
+<script type="math/tex; mode=display">L_O = \sum_i r_i \times m_i\dot r_i =\sum_i m_i[r_i\times\omega\times r_i]</script><p>thanks to properties of cross product,<br>above equatin can be rewriten to:</p>
+<script type="math/tex; mode=display">L_O = \sum_i m_i[r_i\times(\omega\times r_i)] = \sum_i m_i[(r_i \cdot r_i)\omega - (r_i \cdot \omega)r_i]</script><p>the expression of $r_i$ can be written as coordinate form.</p>
+<script type="math/tex; mode=display">r_i = [x_i, y_i, z_i]^T</script><p>thus,</p>
+<script type="math/tex; mode=display">L_O = \{\sum_i m_i[({r_i}^Tr_i)I - {r_i}{r_i}^T]\}\omega = I_O\omega</script><p>where</p>
+<script type="math/tex; mode=display">I_O = \left[\begin{matrix} I_x  &-I_{xy} &-I_{xz}\\-I_{xy}    &I_y  &-I_{yz} \\ -I_{xz} &-I_{yz} &I_z  \end{matrix}\right]</script><p>$I_O$ are called <strong><em>tensor matrix of inertia</em></strong> ,which correspond to fixed point $O$. The intertia tensor matrix are symmetrice and definite.</p>
+<h3 id="coordinate-of-momentum-of-mass-center"><a href="#coordinate-of-momentum-of-mass-center" class="headerlink" title="coordinate of momentum of mass center"></a><strong><em>coordinate of momentum of mass center</em></strong></h3><p>the relative momentum moment :</p>
+<script type="math/tex; mode=display">L_C^r = \sum_i r_{Ci} \times m_i\dot r_{Ci}</script><p>and the relative velocity from mass point $i$ to $C$ :</p>
+<script type="math/tex; mode=display">\dot r_{Ci} = \omega\times r_{Ci}</script><p>similar with last situation, the relative momentum are conduct in form of </p>
+<script type="math/tex; mode=display">L_C^r = \bar I_c\bar\omega</script><h2 id="Absolute-derivation-and-relative-derivation-of-varibale-vector"><a href="#Absolute-derivation-and-relative-derivation-of-varibale-vector" class="headerlink" title="Absolute derivation and relative derivation of varibale vector"></a>Absolute derivation and relative derivation of varibale vector</h2><p>the vector is denoted as $a$.<br>the <strong>absolute derivation</strong> ($\dot a$) is the derivation corresponding to static coordinate<br>while the <strong>relative derivation</strong> ($\bar{\dot a}$) is corresponding to dynamic coordinate.</p>
+<script type="math/tex; mode=display">\dot a = \bar{\dot a} + \omega\times a</script><h2 id="Euler-Equation-2"><a href="#Euler-Equation-2" class="headerlink" title="Euler Equation(2)"></a>Euler Equation(2)</h2><p>the euler equation is using variable vector’s absolute and relative derivation to represent momentum  moment theorem in dynamic coordinate(usually are coordinate linked to rigid body).</p>
+<h3 id="1-rotate-around-fixed-point-1"><a href="#1-rotate-around-fixed-point-1" class="headerlink" title="1. rotate around fixed point"></a><em>1. rotate around fixed point</em></h3><p>from the basic definition of momentum moment theorem, </p>
+<script type="math/tex; mode=display">\dot L_O = M_O</script><p>using relationship of abs/rel derivation,</p>
+<script type="math/tex; mode=display">\dot L_O = \bar{\dot L_O}+\omega\times L_O = \bar{\dot L_O} + \omega\times(I_O\omega)a</script><p>the momentum moment can be expressed as tensor form.</p>
+<script type="math/tex; mode=display">\bar{\dot L_O} = \bar{\dot I_O\omega} = \bar{\dot I_O}\omega +I_O\bar{\dot \omega}</script><p>since the tensor matrix of rigid body coresponding to point $O$ in rigid-linked coordinate are constant matrix,</p>
+<script type="math/tex; mode=display">{\dot\omega} = \bar{\dot\omega} + \omega\times\omega</script><p>where  $\omega\times\omega = 0$, thus</p>
+<script type="math/tex; mode=display">{\dot\omega} = \bar{\dot\omega}</script><p>As the result, subsitude above equations to basic momentum moment equation, we obtain following one:</p>
+<script type="math/tex; mode=display">M_O = I_O\dot\omega + \omega\times I_O\omega</script><h3 id="2-general-rigid-body-Euler-equation-to-mass-center"><a href="#2-general-rigid-body-Euler-equation-to-mass-center" class="headerlink" title="2. general rigid body Euler equation to mass center"></a><em>2. general rigid body Euler equation to mass center</em></h3><script type="math/tex; mode=display">\dot L_C^r + \omega \times L_C^r = M_c</script><p>described in rigid coordinate and used rigid-mass center momentum moment, we obtain:</p>
+<script type="math/tex; mode=display">\dot {(\bar I_C\bar\omega)} + \bar\omega\times\bar I_C\bar\omega = \dot{\bar I_C}\bar\omega +\bar I_C\dot{\bar\omega}+\bar\omega\times\bar{I_C}\bar\omega = \bar{M_C}</script><p>where $\bar{I_C}$ is constant matrix and </p>
+<script type="math/tex; mode=display">{\dot{\bar\omega}} = \bar{\dot\omega}</script><p>thus, the <em>general rigid body Euler equation to mass center</em> are given:</p>
+<script type="math/tex; mode=display">\bar I_C\dot{\bar\omega}+\bar\omega\times\bar{I_C}\bar\omega = \bar{M_C}</script><blockquote>
+<p>this equation holds for any coordinate with form of </p>
+<script type="math/tex; mode=display">I_C\dot{\omega}+\omega\times{I_C}\omega = {M_C}</script><p>This expression indicates that <em>rigid body’s rotation can be described in Euler equation.</em></p>
+</blockquote>
+<h4 id="Conclusion-1"><a href="#Conclusion-1" class="headerlink" title="Conclusion 1"></a><strong>Conclusion 1</strong></h4><blockquote>
+<p>the translation of mass can be described in Newton equation:</p>
+<script type="math/tex; mode=display">m \ddot r_c =F</script><p>and the rotation of mas can be described in Euler equation:</p>
+<script type="math/tex; mode=display">I_C\dot{\omega}+\omega\times{I_C}\omega = {M_C}</script><p>combined Newton-Euler equation can described all of motions of rigid body.</p>
+</blockquote>
+<h2 id="Using-Newton-Euler-to-construct-robot’s-dynamics"><a href="#Using-Newton-Euler-to-construct-robot’s-dynamics" class="headerlink" title="Using Newton-Euler to construct robot’s dynamics"></a>Using Newton-Euler to construct robot’s dynamics</h2><p>Newton-Euler method focus on single rigid body’s dynamics,while Lagrange methond focus on multi rigid body’s dynamics.</p>
+<p>thus <strong><em>the dynamics constructed in Newton-Euler methond will be a set of equations</em></strong>.</p>
+<p><img src="/home/azurec/Pictures/Selection_001.png" alt="linkage-1 analysis"></p>
+<ol>
+<li><p>for translation of rigid body:</p>
+<script type="math/tex; mode=display">\begin{aligned}m_ia_{Ci} &= f_i - f_{i+1} + m_ig \\ i &= 0,1,...,n\\f_{n+1} &= 0\end{aligned}</script><p>the first equation in above equation set can be expressed in coordinate form:</p>
+<script type="math/tex; mode=display">m_i(a_{Ci}-g) = f_i - f_{i+1}</script></li>
+<li><p>for rotation of rigid body:</p>
+<script type="math/tex; mode=display">\begin{aligned}I_{Ci}\dot\omega_i + \omega_i\times I_{Ci}\omega_i &= M_{Ci} \\ i &= 0,1,...,n\end{aligned}</script><p>for calculation, $M_{Ci}$ is the principal moment of external force at linkage-i.</p>
+<script type="math/tex; mode=display">M_{Ci} = n_i - n_{i+1} + [-(p_i + r_{Ci})]\times f_i + (-r_{Ci})\times (-f_{i+1})</script><p>thus the Euler equation can be written as</p>
+<script type="math/tex; mode=display">\begin{aligned}I_{Ci}\dot\omega_i + \omega_i\times I_{Ci}\omega_i &=n_i - n_{i+1} + -(p_i + r_{Ci})\times f_i + (-r_{Ci})\times (-f_{i+1}) \\ i &= 0,1,...,n\end{aligned}</script></li>
+<li><p>addition equation<br>when step 1 and 2 hold, the translation and rotation of linkage are established. However the $f$ and $n$ include all of active force and constraint force. To express the relationship between $\tau$ and $(f , n)$, there needs an addition equation:</p>
+<script type="math/tex; mode=display">\begin{aligned}\tau_i &= z_{i-1}^T(\bar\sigma_i n_i + \sigma_i f_i) \\ i &= 1,...,n \\ \sigma_i &= \{0,1\}\end{aligned}</script><blockquote>
+<ol>
+<li>when $joint-i$ is rotation joint, the $\tau_i$ is the portion of $n_i$ at axis $Z_{i-1}$.</li>
+<li>when $joint-i$ is translation joint, the $\tau_i$ is the portion of $f_i$ at axis $Z_{i-1}$.<br>the symbol $\sigma_i = 0$ which means $\bar\sigma_i = 1$, indicates current joint is rotation joint, vice versa.</li>
+</ol>
+</blockquote>
+</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/09/27/Newton-Euler-Dynamics/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -473,5 +633,21 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 </div>
   </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<!-- <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>
